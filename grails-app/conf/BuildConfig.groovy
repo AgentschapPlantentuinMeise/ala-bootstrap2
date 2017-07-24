@@ -26,10 +26,12 @@ grails.project.dependency.resolution = {
         compile ('au.org.ala:ala-cas-client:2.3') {
             excludes([group: 'javax.servlet', name: 'servlet-api'])
         }
+
     }
 
     plugins {
 
+        build ":tomcat:7.0.54"
         build(":release:3.1.1",
                 ":rest-client-builder:2.1.1") {
             export = false
